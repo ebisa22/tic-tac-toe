@@ -3,3 +3,442 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --body-background:#F0f0f0;
+    --win-color:#00FF7F;
+}
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url(./font/Norse-Bold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(./font/Roboto-VariableFont_wdth\,wght.ttf)format('truetype');
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    background-color: var(--body-background);
+    font-weight: 300;
+}
+/* header-style */
+.header{
+    background-color: #313647;
+    color: #fff;
+    padding:15px 30px 25px;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    gap: 30px;
+}
+.title{
+    font-family:'Norse-Bold',sans-serif;
+    font-size: 2.5rem;
+}
+.header button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition:0.53s all;
+}
+.header button:hover{
+    text-decoration: underline;
+}
+.name-container{
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.name-container>p{
+     font-size: 30px;
+     text-transform: capitalize;
+     visibility: hidden;
+     font-weight: 500;
+     color: #313647;
+}
+.name-container button{
+font-size:20px;
+border-radius: 4px;
+border: 1px solid #000;
+padding: 10px;
+outline:none;
+cursor: pointer;
+color: #fff;
+background-color: #313647;
+}
+/* sign-dialog style */
+#sign {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: min(50%,440px);
+    margin: 30px auto;
+    padding: 14px 30px 15px;
+    position: relative;
+}
+#sign h1{
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+#sign::backdrop{
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.form-container>div{
+    margin-bottom: 25px;
+   display: flex;
+   flex-wrap: wrap;
+   gap:10px;
+}
+.form-container>div>label{
+    margin-right: 13px;
+
+}
+.form-container>div>input{
+    padding: 10px;
+    border-radius: 4px;
+    outline:none;
+    border: 1px solid #cedede;
+    opacity: 0.89;
+}
+#enter-btn{
+    margin: 0px auto;
+    display: block;
+    width: 70%;
+    padding: 6px;
+    cursor: pointer;
+    background-color:#313647;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.dialog-close{
+position: absolute;
+top:5px;
+right: 13px;
+border: none;
+outline: none;
+background-color:transparent;
+font-size: 1.5rem;
+cursor: pointer;
+transition: 0.12s;
+color: red;
+}
+/* info dialog style */
+#description{
+    margin: 30px auto;
+    width:max(50%,440px);
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding: 20px 40px 15px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    outline: none;
+    position: relative;
+}
+#description p{
+    padding-top: 20px;
+    line-height: 1.6;
+    word-spacing: 0.14em;
+}
+/* main grid */
+#game-board-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+   width: 300px;
+   height: 300px;
+   margin: 30px auto;
+   cursor: pointer;
+   background-color: #fff;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.box{
+    border: 2px solid #555;
+    font-size: 4.34rem;
+    text-align: center;
+    font-weight: 600;
+   font-family: cursive;
+}
+.no-bor{
+    border-top: none;
+    border-left: none;
+}
+.no-bottom{
+    border-bottom: none;
+}
+.no-right{
+    border-right: none;
+}
+.box:hover{
+    background-color:#F0f0f0;
+}
+/* color changing paragraphs for game turn */
+.turn-on{
+   color: #5CB338!important;  
+}
+ #announce{
+    position: relative;
+    border: none;
+    outline: none;
+     width: 100%;
+     height: 100px;
+    text-align: center;
+    padding-top:20px;
+    background-color: #fafafa;
+ }
+ #announce #announce-para{
+   font-size: 1.7rem;
+    color:rgb(64, 211, 74);
+    font-weight: 400;
+ }
+.announce-close{
+position: absolute;
+top:5px;
+right: 13px;
+border: none;
+outline: none;
+background-color:transparent;
+font-size: 1.5rem;
+cursor: pointer;
+transition: 0.12s;
+color: red;
+}
+ 
+/* introduction dialog style  */
+#intro-dialog{
+    position: relative;
+    border: none;
+    outline: none;
+     width: 100%;
+    text-align: center;
+    padding-top:15px;
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}
+#intro-para{
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+.intro-dialog-close{
+position: absolute;
+top:5px;
+right: 13px;
+border: none;
+outline: none;
+background-color:transparent;
+font-size: 1.5rem;
+cursor: pointer;
+transition: 0.12s;
+color: red;
+}
+ 
+
+
+
+/* Responsive layout tablet view*/
+@media screen and (max-width:680px){
+.header{
+    padding:15px;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+.title{
+    font-size: 2rem;
+}
+.header button{
+    font-size: 1.1rem;
+}
+.name-container{
+    padding: 30px 30px;
+    display: flex;
+    justify-content: space-around;
+    gap:15px;
+}
+.name-container>p{
+     font-size: 1.5rem;
+}
+.name-container button{
+font-size:1.2rem;
+padding: 6px 8px;
+}
+#sign {
+    width: max(60%,300px);
+    padding: 14px 20px 15px;
+}
+#sign h1{
+  font-size: 1.2rem;
+}
+.form-container>div{
+    margin-bottom: 25px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap:14px;
+}
+.form-container>div>input{
+    width: 85%;
+}
+#enter-btn{
+    width: 60%;
+}
+.dialog-close{
+top:7px;
+right: 10px;
+font-size: 1.35rem;
+}
+/* info dialog style */
+#description{
+    width:max(50%,440px);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+}
+#description p{
+   padding-top: 5px;
+    line-height: 1.5;
+    word-spacing: 0.1em;
+}
+/* main grid */
+#game-board-container{
+   width: 200px;
+   height: 200px;
+   margin: 10px auto;
+}
+.box{
+    font-size: 2.5rem;
+}
+ #announce{
+     height: 60px;
+    text-align: left;
+    padding-left: 10%;
+    padding-top:10px;
+ }
+ #announce #announce-para{
+   font-size: 1.5rem;
+ }
+.announce-close{
+top:5px;
+right: 10px;
+font-size: 1.3rem;
+}
+/* introduction dialog style  */
+#intro-dialog{
+    position: relative;
+    border: none;
+    outline: none;
+     width: 100%;
+    text-align: center;
+    padding-top:15px;
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}
+#intro-para{
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+}
+
+
+
+/* Responsive layout mobile view*/
+@media screen and (max-width:380px){
+  .header{
+    padding:10px 8px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.title{
+    font-size: 1.5rem;
+}
+.header button{
+    font-size: 0.98rem;
+}
+.name-container{
+    padding: 30px 8px;
+    display: flex;
+    justify-content: space-around;
+    gap:15px;
+}
+.name-container>p{
+     font-size: 1.2rem;
+}
+.name-container button{
+font-size:1rem;
+padding: 4px 8px;
+}
+#sign {
+    width: max(50%,220px);
+    padding: 14px 20px 15px;
+}
+#sign h1{
+  font-size: 1rem;
+}
+.form-container>div{
+    margin-bottom: 15px;
+    gap:12px;
+}
+.form-container>div>label{
+    font-size: 0.98rem;
+}
+.form-container>div>input{
+    width: 90%;
+    padding: 7px;
+}
+#enter-btn{
+    margin-top: 20px;
+    font-size: 0.98rem;
+    width: 60%;
+}
+.dialog-close{
+top:7px;
+right: 10px;
+font-size: 1.35rem;
+}
+/* info dialog style */
+#description{
+    width:80%;
+    font-size: 0.98rem;
+    padding: 30px 10px;
+}
+/* main grid */
+#game-board-container{
+   width: 200px;
+   height: 200px;
+   margin: 10px auto;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1rem;
+}
+ #announce{
+     height: 50px;
+    padding-left: 10px;
+    padding-top:12px;
+ }
+ #announce #announce-para{
+   font-size: 1.2rem;
+ }
+.announce-close{
+top:5px;
+right: 7px;
+font-size: 1.2rem;
+}
+/* introduction dialog style  */
+#intro-dialog{
+    padding: 30px 5px 10px;
+    background-color: #fafafa;
+}
+#intro-para{
+    font-size: 1rem;
+
+}
+.intro-dialog-close{
+right: 7px;
+font-size: 1.15rem;
+}
+ 
+}
