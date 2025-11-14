@@ -1,6 +1,5 @@
 
 const gameApp=(function (){
-
   const gameBoard = {
     gameBoxes: [],
     currentPlayer: "",

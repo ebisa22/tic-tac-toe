@@ -149,19 +149,27 @@ color: red;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
-   width: 300px;
-   height: 300px;
-   margin: 30px auto;
+   width: 350px;
+   height: 350px;
+   margin: 20px auto;
    cursor: pointer;
    background-color: #fff;
    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent;
 }
+
 .box{
     border: 2px solid #555;
     font-size: 4.34rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 600;
    font-family: cursive;
+   user-select: none;
+}
+.box:active{
+    background-color: transparent;
 }
 .no-bor{
     border-top: none;
@@ -237,10 +245,8 @@ color: red;
 }
  
 
-
-
 /* Responsive layout tablet view*/
-@media screen and (max-width:680px){
+@media screen and (max-width:760px){
 .header{
     padding:15px;
     grid-template-columns: 2fr 1fr 1fr;
@@ -302,21 +308,19 @@ font-size: 1.35rem;
 }
 /* main grid */
 #game-board-container{
-   width: 200px;
-   height: 200px;
-   margin: 10px auto;
+   margin:30px auto;
 }
 .box{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
  #announce{
      height: 60px;
     text-align: left;
-    padding-left: 10%;
+    padding-left: 10px;
     padding-top:10px;
  }
  #announce #announce-para{
-   font-size: 1.5rem;
+   font-size: 1.3rem;
  }
 .announce-close{
 top:5px;
@@ -350,10 +354,10 @@ font-size: 1.3rem;
     gap: 20px;
 }
 .title{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .header button{
-    font-size: 0.98rem;
+    font-size: 0.9rem;
 }
 .name-container{
     padding: 30px 8px;
@@ -404,8 +408,8 @@ font-size: 1.35rem;
 }
 /* main grid */
 #game-board-container{
-   width: 200px;
-   height: 200px;
+   width: 230px;
+   height: 230px;
    margin: 10px auto;
 }
 .box{
@@ -420,12 +424,12 @@ font-size: 1.35rem;
     padding-top:12px;
  }
  #announce #announce-para{
-   font-size: 1.2rem;
+   font-size: 0.9rem;
  }
 .announce-close{
 top:5px;
 right: 7px;
-font-size: 1.2rem;
+font-size: 1.1rem;
 }
 /* introduction dialog style  */
 #intro-dialog{
