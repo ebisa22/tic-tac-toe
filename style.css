@@ -165,7 +165,7 @@ color: red;
     justify-content: center;
     align-items: center;
     font-weight: 600;
-   font-family: cursive;
+    font-family: cursive;
    user-select: none;
 }
 .box:active{
@@ -314,6 +314,7 @@ font-size: 1.35rem;
 }
 .box{
     font-size: 3.5rem;
+    font-weight: 900;
 }
  #announce{
     width: 60%;
@@ -346,7 +347,7 @@ font-size: 1.3rem;
 
 
 /* Responsive layout mobile view*/
-@media screen and (max-width:380px){
+@media screen and (max-width:430px){
   .header{
     padding:10px 8px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -407,8 +408,8 @@ font-size: 1.35rem;
 }
 /* main grid */
 #game-board-container{
-   width: 230px;
-   height: 230px;
+   width: 220px;
+  height: 220px;
    margin: 10px auto;
 }
 .box{
@@ -416,10 +417,15 @@ font-size: 1.35rem;
     justify-content: center;
     align-items: center;
     font-size: 2.1rem;
+    font-weight:900;
+}
+#announce{
+    padding: 14px 20px 7px 10px;
+    width: 75%;
 }
  #announce #announce-para{
-   font-size: 0.9rem;
-   line-height: 1.6;
+   font-size: 1rem;
+   line-height: 2;
  }
 .announce-close{
 top:5px;
