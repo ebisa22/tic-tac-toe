@@ -142,27 +142,27 @@ const gameApp=(function (){
 function displayWinner(winner){
     if(winner=='x'){
        gameBoard.player1.score++;
-       cacheDom.announceText.textContent = ` 🎉🎉🎉 ${gameBoard.player1.name} won ! Score ${gameBoard.player1.score} - ${gameBoard.player2.score}`;
+       cacheDom.announceText.textContent = ` 🎉🎉🎉 \n${gameBoard.player1.name} won ! Score ${gameBoard.player1.score} - ${gameBoard.player2.score}`;
        gameBoard.roundCount++;
     }
     else if(winner=='o'){
           gameBoard.player2.score++;
-         cacheDom.announceText.textContent = `🎉🎉🎉 ${gameBoard.player2.name} won ! Score ${gameBoard.player1.score} - ${gameBoard.player2.score}`;
+         cacheDom.announceText.textContent = `🎉🎉🎉 \n${gameBoard.player2.name} won ! Score ${gameBoard.player1.score} - ${gameBoard.player2.score}`;
        gameBoard.roundCount++;
     }
     else if(winner=='No Winner'){
-      cacheDom.announceText.textContent = `It was a tie, Score ${gameBoard.player1.score} - ${gameBoard.player2.score}`;
+      cacheDom.announceText.textContent = `It was a tie\n Score ${gameBoard.player1.score} - ${gameBoard.player2.score}`;
        gameBoard.roundCount++;
     }
     else if (winner=="overall") {
       if (gameBoard.player1.score > gameBoard.player2.score) {
-        cacheDom.announceText.textContent = ` 🎉🎉🎉 Game Over ${gameBoard.player1.name} won ! Score ${gameBoard.player1.score} - ${gameBoard.player2.score}, Start Again`;
+        cacheDom.announceText.textContent = `Game Over ${gameBoard.player1.name} won !\n Score ${gameBoard.player1.score} - ${gameBoard.player2.score}, Start Again`;
       } 
       else if (gameBoard.player1.score < gameBoard.player2.score) {
-        cacheDom.announceText.textContent = ` 🎉🎉🎉 Game Over ${gameBoard.player2.name} won ! Score ${gameBoard.player1.score} - ${gameBoard.player2.score}, Start Again`;
+        cacheDom.announceText.textContent = `Game Over ${gameBoard.player2.name} won !\n Score ${gameBoard.player1.score} - ${gameBoard.player2.score}, Start Again`;
       } 
       else if (gameBoard.player1.score == gameBoard.player2.score) {
-        cacheDom.announceText.textContent = ` 🎉🎉🎉 Game Over It was a draw, Score ${gameBoard.player1.score} - ${gameBoard.player2.score}, Start Again`;
+        cacheDom.announceText.textContent = `Game Over It was a draw,\n Score ${gameBoard.player1.score} - ${gameBoard.player2.score}, Start Again`;
       }
    
     }

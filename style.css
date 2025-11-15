@@ -193,14 +193,17 @@ color: red;
     border: none;
     outline: none;
     text-align: center;
-    width: 100%;
-    padding:30px 25px 10px 10px;
+     width: max(55%,440px);
+     margin: 30px auto;
+    padding:15px 25px 10px 10px;
+    line-height: 1.6;
     background-color: #fafafa;
  }
  #announce #announce-para{
    font-size: 1.7rem;
     color:rgb(64, 211, 74);
     font-weight: 400;
+    white-space: pre-line;
  }
 .announce-close{
 position: absolute;
@@ -313,9 +316,7 @@ font-size: 1.35rem;
     font-size: 3.5rem;
 }
  #announce{
-    text-align: left;
-    padding-left: 10px;
-    padding-top:10px;
+    width: 60%;
  }
  #announce #announce-para{
    font-size: 1.3rem;
@@ -416,9 +417,6 @@ font-size: 1.35rem;
     align-items: center;
     font-size: 2.1rem;
 }
- #announce{
- text-align: center;
- }
  #announce #announce-para{
    font-size: 0.9rem;
    line-height: 1.6;
